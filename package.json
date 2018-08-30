@@ -10,6 +10,9 @@
     "lint": "eslint . --ext .js --cache",
     "posttest": "yarn lint",
     "test": "NODE_ENV=testing mocha -- $(find test -name '*.test.js')",
+    "build": "browserify -e client/index.js -o public/bundle.js",
+    "dev": "yarn build && yarn start",
+    "start": "node server",
     "preship": "yarn test",
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
   },
