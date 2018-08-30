@@ -7,7 +7,7 @@
 
 ## Run
 - Use: `yarn dev`
-- View: [http://localhost:9999](http://localhost:9999)
+- View: [http://localhost:8080](http://localhost:8080)
 
 ## Test
 - `yarn lint` run just eslint
